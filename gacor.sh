@@ -33,9 +33,9 @@ rm -rf sempak.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 149.28.59.173:443 
-socks5_username = kaya 
-socks5_password = raya
+socks5 = 149.28.159.30:443 
+socks5_username = mbah
+socks5_password = kencot
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
