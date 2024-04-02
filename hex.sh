@@ -12,7 +12,7 @@ rm -rf apik.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 103.253.244.9
+socks5 = 103.253.244.9:443
 socks5_username = jiz
 socks5_password = juz
 END
